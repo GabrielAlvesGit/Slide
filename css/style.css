@@ -21,13 +21,28 @@ img {
   display: flex;
 }
 
+.slide:hover {
+  will-change: transform;
+}
+
 .slide li {
   flex-shrink: 0;
   width: 80vw;
   max-width: 800px;
   margin: 0 20px;
+  border-radius: 4px;
+  box-shadow: 00 2px 4px rgb(0, 0, 0, .4);
+  overflow: hidden;
+  opacity: 0.8;
+  transform: scale(.8);
+  transition: .4s all;
 }
-
+/* 
 .slide {
   transform: translate3d(-698px, 0px, 0px);
+} */
+
+.slide li.active {
+  opacity: 1;
+  transform: scale(1);
 }
